@@ -11,6 +11,10 @@ namespace ApiCliente.DataAccess.db
 {
     public class ContextoDB : DbContext
     {
+        public ContextoDB()
+        {
+        }
+
         public ContextoDB(DbContextOptions<ContextoDB> options) : base(options)
         {
 

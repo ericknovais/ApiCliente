@@ -19,5 +19,11 @@ namespace ApiCliente.DataModel.modelo
             if (_msgErro.Length > 0)
                 throw new Exception(_msgErro.ToString());
         }
+
+        public virtual void ValidaCampoTexto(string campo, string nomeCampo)
+        {
+            if (string.IsNullOrEmpty(campo))
+                _msgErro.Append($"O campo {nomeCampo} é obrigatório {Environment.NewLine}"); 
+        }
     }
 }

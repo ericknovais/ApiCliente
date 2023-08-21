@@ -11,5 +11,6 @@ namespace ApiCliente.DataModel.repositorio
         void SaveChanges();
         IClienteRepositorio Cliente { get; }
         IEnderecoRepositorio Endereco { get; }
+        IEmailRepositorio Email { get; }
     }
 }

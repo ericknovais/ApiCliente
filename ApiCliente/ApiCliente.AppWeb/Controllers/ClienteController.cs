@@ -2,6 +2,8 @@
 using ApiCliente.DataAccess.repositorio;
 using ApiCliente.DataModel.modelo;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.ConstrainedExecution;
 
 namespace ApiCliente.AppWeb.Controllers
 {
@@ -42,26 +44,57 @@ namespace ApiCliente.AppWeb.Controllers
             {
                 Cliente cliente = ObterCliente(id);
                 cliente.NomeCompleto = clienteView.NomeCompleto;
-                cliente.Email = clienteView.Email;
                 cliente.Telefone = clienteView.Telefone;
                 cliente.DataCriacao = id.Equals(0) ? DateTime.Now : cliente.DataCriacao;
                 cliente.DataAtualizacao = DateTime.Now;
                 cliente.Validar();
                 repositorio.Cliente.Salvar(cliente);
 
-                Endereco endereco = ObterEnderecoCliente(cliente.ID);
-                endereco.ClienteID = cliente.ID;
-                endereco.CEP = clienteView.CEP;
-                endereco.Logradouro = clienteView.Logradouro;
-                endereco.Bairro = clienteView.Bairro;
-                endereco.Numero = clienteView.Numero;
-                endereco.Complemento = clienteView.Complemento;
-                endereco.Cidade = clienteView.Cidade;
-                endereco.Estado = clienteView.Estado;
-                endereco.DataCriacao = id.Equals(0) ? DateTime.Now : endereco.DataCriacao;
-                endereco.DataAtualizacao = DateTime.Now;
-                endereco.Validar();
-                repositorio.Endereco.Salvar(endereco);
+                List<Email> emails = cliente.ID.Equals(0) ? new List<Email>() : repositorio.Email.ObterEmailPorCLienteID(cliente.ID);
+
+                var x = 0;
+
+                foreach (var item in clienteView.Emails)
+                {
+                    Email email = id.Equals(0) ? new Email() : repositorio.Email.ObterPorID(item.ID);
+                    email.ClienteID = cliente.ID;
+                    email.Descricao = item.Descricao;
+                    email.DataCriacao = id.Equals(0) ? DateTime.Now : email.DataCriacao;
+                    email.DataAtualizacao = DateTime.Now;
+                    if (x.Equals(0))
+                        email.Principal = true;
+                    else
+                        email.Principal = false;
+                    email.Validar();
+                    repositorio.Email.Salvar(email);
+                    x++;
+                }
+
+                List<Endereco> enderecos = ObterEnderecoCliente(cliente.ID);
+
+                x = 0;
+                foreach (var item in clienteView.Enderecos)
+                {
+                    Endereco endereco = id.Equals(0) ? new Endereco() : repositorio.Endereco.ObterPorID(item.ID);
+                    endereco.ClienteID = cliente.ID;
+                    endereco.CEP = item.CEP;
+                    endereco.Logradouro = item.Logradouro;
+                    endereco.Bairro = item.Bairro;
+                    endereco.Numero = item.Numero;
+                    endereco.Complemento = item.Complemento;
+                    endereco.Cidade = item.Cidade;
+                    endereco.Estado = item.Estado;
+                    endereco.DataCriacao = id.Equals(0) ? DateTime.Now : endereco.DataCriacao;
+                    endereco.DataAtualizacao = DateTime.Now;
+                    if (x.Equals(0))
+                        endereco.Principal = true;
+                    else
+                        endereco.Principal = false;
+                    enderecos.Add(endereco);
+                    endereco.Validar();
+                    repositorio.Endereco.Salvar(endereco);
+                    x++;
+                }
 
                 repositorio.SaveChanges();
 
@@ -78,20 +111,15 @@ namespace ApiCliente.AppWeb.Controllers
         private ClienteViewModel ObterClienteViewModel(int id)
         {
             Cliente cliente = ObterCliente(id);
-            Endereco endereco = ObterEnderecoCliente(cliente.ID);
+            List<Endereco> enderecos = ObterEnderecoCliente(cliente.ID);
+            List<Email> emails = repositorio.Email.ObterEmailPorCLienteID(cliente.ID);
 
             ClienteViewModel clienteView = new ClienteViewModel()
             {
                 NomeCompleto = cliente.NomeCompleto,
                 Telefone = cliente.Telefone,
-                Email = cliente.Email,
-                CEP = endereco.CEP,
-                Logradouro = endereco.Logradouro,
-                Numero = endereco.Numero,
-                Complemento = endereco.Complemento,
-                Bairro = endereco.Bairro,
-                Cidade = endereco.Cidade,
-                Estado = endereco.Estado
+                Emails = emails,
+                Enderecos = enderecos
             };
 
             return clienteView;
@@ -100,9 +128,9 @@ namespace ApiCliente.AppWeb.Controllers
         {
             return !id.Equals(0) ? repositorio.Cliente.ObterPorID(id) : new Cliente();
         }
-        private Endereco ObterEnderecoCliente(int clienteID)
+        private List<Endereco> ObterEnderecoCliente(int clienteID)
         {
-            return clienteID.Equals(0) ? new Endereco() : repositorio.Endereco.ObterEnderecoPorIdCliente(clienteID);
+            return clienteID.Equals(0) ? new List<Endereco>() : repositorio.Endereco.ObterEnderecoPorIdCliente(clienteID);
         }
     }
 }

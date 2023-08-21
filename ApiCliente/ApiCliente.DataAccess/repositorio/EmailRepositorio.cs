@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace ApiCliente.DataAccess.repositorio
 {
-    class EnderecoRepositorio : AbstractGeneric<Endereco>, IEnderecoRepositorio
+    class EmailRepositorio : AbstractGeneric<Email>, IEmailRepositorio
     {
         ContextoDB ctx;
-        public EnderecoRepositorio(ContextoDB contextoDB) : base(contextoDB)
+        public EmailRepositorio(ContextoDB contextoDB) : base(contextoDB)
         {
             ctx = contextoDB;
         }
 
-        public List<Endereco> ObterEnderecoPorIdCliente(int clienteID)
+        public List<Email> ObterEmailPorCLienteID(int clienteID)
         {
-            return ctx.Enderecos.Where(x => x.ClienteID.Equals(clienteID)).ToList();
+            return ctx.Emails.Where(x => x.ClienteID.Equals(clienteID)).ToList();
         }
     }
 }

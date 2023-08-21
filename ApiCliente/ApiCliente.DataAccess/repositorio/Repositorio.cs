@@ -23,6 +23,10 @@ namespace ApiCliente.DataAccess.repositorio
         IEnderecoRepositorio endereco;
         public IEnderecoRepositorio Endereco { get { return endereco ?? (endereco = new EnderecoRepositorio(ctx)); } }
 
+        IEmailRepositorio email;
+        public IEmailRepositorio Email { get { return email ?? (email = new EmailRepositorio(ctx)); } }
+
+
         public void SaveChanges()
         {
             ctx.SaveChanges();

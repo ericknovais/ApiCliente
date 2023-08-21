@@ -15,15 +15,17 @@ namespace ApiCliente.DataModel.modelo
         {
             NomeCompleto = string.Empty;
             Telefone = string.Empty;
-            Email = string.Empty;
+            //Email = string.Empty;
         }
 
         public string NomeCompleto { get; set; }
         public string Telefone { get; set; }
-        public string Email { get; set; }
 
         public override void Validar()
         {
+            ValidaCampoTexto(NomeCompleto, "Nome Completo");
+            ValidaCampoTexto(Telefone, "Telefone");
+
             base.Validar();
         }
     }

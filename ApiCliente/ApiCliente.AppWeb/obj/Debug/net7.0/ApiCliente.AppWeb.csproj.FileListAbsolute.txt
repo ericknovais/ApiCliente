@@ -1,3 +1,11 @@
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.csproj.AssemblyReference.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.AssemblyInfoInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.AssemblyInfo.cs
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.csproj.CoreCompileInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.MvcApplicationPartsAssemblyInfo.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.RazorAssemblyInfo.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.RazorAssemblyInfo.cs
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\appsettings.Development.json
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\appsettings.json
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\ApiCliente.AppWeb.staticwebassets.runtime.json
@@ -210,14 +218,6 @@ D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\ApiCliente.
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\ApiCliente.DataModel.dll
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\ApiCliente.DataAccess.pdb
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\bin\Debug\net7.0\ApiCliente.DataModel.pdb
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.csproj.AssemblyReference.cache
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.AssemblyInfoInputs.cache
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.AssemblyInfo.cs
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.csproj.CoreCompileInputs.cache
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.MvcApplicationPartsAssemblyInfo.cache
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.RazorAssemblyInfo.cache
-D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\ApiCliente.AppWeb.RazorAssemblyInfo.cs
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.ApiCliente.AppWeb.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.build.ApiCliente.AppWeb.props
 D:\Projetos\ApiCliente\ApiCliente\ApiCliente.AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ApiCliente.AppWeb.props

@@ -2,6 +2,9 @@
 
 @{
     ViewData["Title"] = "Edit";
+
+    var qtdEmails = Model.Emails.Count.Equals(0) ? 1 : Model.Emails.Count();
+    var qtdEnderecos = Model.Enderecos.Count.Equals(0) ? 1 : Model.Enderecos.Count();
 }
 
 <h1>Edit</h1>
@@ -10,62 +13,74 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomeCompleto" class="control-label"></label>
-                <input asp-for="NomeCompleto" class="form-control" />
-                <span asp-validation-for="NomeCompleto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Logradouro" class="control-label"></label>
-                <input asp-for="Logradouro" class="form-control" />
-                <span asp-validation-for="Logradouro" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" class="form-control" />
-                <span asp-validation-for="CEP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Numero" class="control-label"></label>
-                <input asp-for="Numero" class="form-control" />
-                <span asp-validation-for="Numero" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Complemento" class="control-label"></label>
-                <input asp-for="Complemento" class="form-control" />
-                <span asp-validation-for="Complemento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Bairro" class="control-label"></label>
-                <input asp-for="Bairro" class="form-control" />
-                <span asp-validation-for="Bairro" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cidade" class="control-label"></label>
-                <input asp-for="Cidade" class="form-control" />
-                <span asp-validation-for="Cidade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        @using (Html.BeginForm())
+        {
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="NomeCompleto" class="control-label"></label>
+                    <input asp-for="NomeCompleto" class="form-control" />
+                    <span asp-validation-for="NomeCompleto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefone" class="control-label"></label>
+                    <input asp-for="Telefone" class="form-control" />
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div>
+                @for (int i = 0; i < qtdEmails; i++)
+                {
+                    <input asp-for="Emails[i].ID" class="invisible" />
+                    <div class="form-group">
+                        <label asp-for="Emails[i].Descricao" class="control-label"></label>
+                        <input asp-for="Emails[i].Descricao" class="form-control" />
+                        <span asp-validation-for="Emails[i].Descricao" class="text-danger"></span>
+                    </div>
+                }
+
+                @for (int i = 0; i < qtdEnderecos; i++)
+                {
+                    <input asp-for="Enderecos[i].ID" class="invisible" />
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Logradouro" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Logradouro" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Logradouro" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].CEP" class="control-label"></label>
+                        <input asp-for="Enderecos[i].CEP" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].CEP" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Numero" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Numero" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Numero" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Complemento" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Complemento" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Complemento" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Bairro" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Bairro" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Bairro" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Cidade" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Cidade" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Cidade" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Enderecos[i].Estado" class="control-label"></label>
+                        <input asp-for="Enderecos[i].Estado" class="form-control" />
+                        <span asp-validation-for="Enderecos[i].Estado" class="text-danger"></span>
+                    </div>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        }
     </div>
 </div>
 
@@ -74,5 +89,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

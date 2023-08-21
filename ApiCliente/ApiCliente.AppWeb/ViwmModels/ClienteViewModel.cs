@@ -1,16 +1,21 @@
-﻿namespace ApiCliente.AppWeb.ViwmModels
+﻿using ApiCliente.DataModel.modelo;
+
+namespace ApiCliente.AppWeb.ViwmModels
 {
     public class ClienteViewModel
     {
+        public ClienteViewModel()
+        {
+            NomeCompleto = string.Empty;
+            Telefone = string.Empty;
+            Emails = new List<Email>() { new Email() };
+            Enderecos = new List<Endereco>() { new Endereco() };
+        }
+
         public string NomeCompleto { get; set; }
         public string Telefone { get; set; }
-        public string Email { get; set; }
-        public string Logradouro { get; set; }
-        public string CEP { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; }
+        public List<Email> Emails { get; set; }
+        public List<Endereco> Enderecos { get; set; }
+
     }
 }

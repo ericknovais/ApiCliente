@@ -15,11 +15,11 @@ namespace ApiCliente.DataAccess.db
             //    base.Database.Delete();
             //else
             //    base.Database.Create();
-            
         }
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Email> Emails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

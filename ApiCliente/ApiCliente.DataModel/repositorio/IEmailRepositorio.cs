@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ApiCliente.DataModel.repositorio
 {
-    public interface IEnderecoRepositorio : IRepositorioBase<Endereco>
+    public interface IEmailRepositorio : IRepositorioBase<Email>
     {
-       List<Endereco> ObterEnderecoPorIdCliente(int clienteID);
+        List<Email> ObterEmailPorCLienteID(int clienteID);
     }
 }

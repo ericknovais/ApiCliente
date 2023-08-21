@@ -30,9 +30,16 @@ namespace ApiCliente.DataModel.modelo
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+        public bool Principal { get; set; }
 
         public override void Validar()
         {
+            ValidaCampoTexto(CEP, "CEP");
+            ValidaCampoTexto(Logradouro, "Logradouro");
+            ValidaCampoTexto(Numero, "Número");
+            ValidaCampoTexto(Bairro, "Bairro");
+            ValidaCampoTexto(Cidade, "Cidade");
+            ValidaCampoTexto(Estado, "Estado");
             base.Validar();
         }
     }

@@ -1,0 +1,11 @@
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\bin\Debug\net7.0\ApiCliente.DataModel.deps.json
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\bin\Debug\net7.0\ApiCliente.DataModel.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\bin\Debug\net7.0\ApiCliente.DataModel.pdb
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.AssemblyInfoInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.AssemblyInfo.cs
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.csproj.CoreCompileInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\refint\ApiCliente.DataModel.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ApiCliente.DataModel.pdb
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataModel\obj\Debug\net7.0\ref\ApiCliente.DataModel.dll

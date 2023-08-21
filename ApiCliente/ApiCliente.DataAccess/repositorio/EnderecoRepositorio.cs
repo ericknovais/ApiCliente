@@ -16,5 +16,10 @@ namespace ApiCliente.DataAccess.repositorio
         {
             ctx = contextoDB;
         }
+
+        public Endereco ObterEnderecoPorIdCliente(int clienteID)
+        {
+            return ctx.Enderecos.FirstOrDefault(x => x.ClienteID.Equals(clienteID));
+        }
     }
 }

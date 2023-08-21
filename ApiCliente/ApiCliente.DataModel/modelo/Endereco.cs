@@ -12,7 +12,7 @@ namespace ApiCliente.DataModel.modelo
     {
         public Cliente Cliente { get; set; }
         public int ClienteID { get; set; }
-        public string CPF { get; set; }
+        public string CEP { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Complemento { get; set; }

@@ -9,5 +9,6 @@ namespace ApiCliente.DataModel.repositorio
 {
     public interface IEnderecoRepositorio : IRepositorioBase<Endereco>
     {
+        Endereco ObterEnderecoPorIdCliente(int clienteID);
     }
 }

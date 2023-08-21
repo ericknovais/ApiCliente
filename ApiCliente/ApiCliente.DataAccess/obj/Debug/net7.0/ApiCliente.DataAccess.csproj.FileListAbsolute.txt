@@ -1,0 +1,17 @@
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataAccess.deps.json
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataAccess.runtimeconfig.json
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataAccess.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataAccess.pdb
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataModel.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\bin\Debug\net7.0\ApiCliente.DataModel.pdb
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.csproj.AssemblyReference.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.AssemblyInfoInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.AssemblyInfo.cs
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.csproj.CoreCompileInputs.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.csproj.CopyComplete
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\refint\ApiCliente.DataAccess.dll
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.pdb
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ApiCliente.DataAccess.genruntimeconfig.cache
+D:\Projetos\ApiCliente\ApiCliente\ApiCliente.DataAccess\obj\Debug\net7.0\ref\ApiCliente.DataAccess.dll

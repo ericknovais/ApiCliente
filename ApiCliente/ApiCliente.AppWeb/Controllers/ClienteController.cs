@@ -31,7 +31,7 @@ namespace ApiCliente.AppWeb.Controllers
             }
             catch (Exception ex)
             {
-                return View(new Cliente());
+                return View(new ClienteViewModel());
             }
         }
 
@@ -72,7 +72,7 @@ namespace ApiCliente.AppWeb.Controllers
             }
             catch (Exception ex)
             {
-                return View(new Cliente());
+                return View(new ClienteViewModel());
             }
         }
         private ClienteViewModel ObterClienteViewModel(int id)
@@ -98,7 +98,7 @@ namespace ApiCliente.AppWeb.Controllers
         }
         private Cliente ObterCliente(int id)
         {
-            return id.Equals(0) ? new Cliente() : repositorio.Cliente.ObterPorID(id);
+            return !id.Equals(0) ? repositorio.Cliente.ObterPorID(id) : new Cliente();
         }
         private Endereco ObterEnderecoCliente(int clienteID)
         {

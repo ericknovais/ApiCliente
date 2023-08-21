@@ -9,12 +9,13 @@ namespace ApiCliente.DataAccess.db
 {
     public class ContextoDB : DbContext
     {
-        public ContextoDB():base("ApiClienteDB")
+        public ContextoDB() : base("ApiClienteDB")
         {
             //if (base.Database.Exists())
             //    base.Database.Delete();
             //else
             //    base.Database.Create();
+            
         }
 
         public DbSet<Cliente> Clientes { get; set; }

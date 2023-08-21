@@ -11,10 +11,12 @@ namespace ApiCliente.DataAccess.repositorio
     public class Repositorio : IRepositorio
     {
         ContextoDB ctx;
+
         public Repositorio()
         {
             ctx = new ContextoDB();
         }
+
         IClienteRepositorio cliente;
         public IClienteRepositorio Cliente { get { return cliente ?? (cliente = new ClienteRepositorio(ctx)); } }
 

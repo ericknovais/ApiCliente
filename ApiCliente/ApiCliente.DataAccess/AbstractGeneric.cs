@@ -12,9 +12,10 @@ namespace ApiCliente.DataAccess
     abstract class AbstractGeneric<T> : IRepositorioBase<T> where T : EntidadeBase
     {
         ContextoDB ctx;
+
         public AbstractGeneric(ContextoDB contextoDB)
         {
-            contextoDB = ctx;
+            ctx = contextoDB;
         }
 
         public void Excluir(T Entidade)

@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiCliente.DataModel.modelo
 {
     [Table("Emails")]
     public class Email : EntidadeBase
     {
-        public Cliente Cliente { get; set; }
+        public Cliente Cliente { get; set; } = new Cliente();
         public int ClienteID { get; set; }
-        
-        [DisplayName("Email")]
-        public string Descricao { get; set; }
 
-        public bool Principal { get; set; }
+        [DisplayName("Email")]
+        public string Descricao { get; set; } = string.Empty;
+
+        public bool Principal { get; set; } = false;
 
         private string _msgErroEmail = "E-mail em um formato invalido";
 

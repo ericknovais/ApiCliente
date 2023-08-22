@@ -1,25 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiCliente.DataModel.modelo
 {
     [Table("Clientes")]
     public class Cliente : EntidadeBase
     {
-        public Cliente()
-        {
-            NomeCompleto = string.Empty;
-            Telefone = string.Empty;
-            //Email = string.Empty;
-        }
-
-        public string NomeCompleto { get; set; }
-        public string Telefone { get; set; }
+        public string NomeCompleto { get; set; } = string.Empty;
+        public string Telefone { get; set; } = string.Empty;
 
         public override void Validar()
         {
